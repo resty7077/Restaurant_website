@@ -11,26 +11,45 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
+        <a href="booking.html">Booking</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
 <section class="hero">
-    <img src="images/food.jpeg" alt="Restaurant Food">
-    <div class="hero-text">
-        <h2>Fresh & Delicious</h2>
-        <p>Savor Every Bite</p>
+    <div class="slider">
+        <img src="images/food1.jpeg" class="slide active">
+        <img src="images/food2.jpeg" class="slide">
+        <img src="images/food5.jpeg" class="slide">
+
+        <div class="hero-text">
+            <h2>Fresh & Delicious</h2>
+            <p>Savor Every Bite</p>
+        </div>
     </div>
 </section>
 
 <section class="about">
     <h2>Welcome to Renah's Restaurant</h2>
-    <p>We serve delicious meals made with fresh ingredients and love. Experience the taste of quality food and warm hospitality.</p>
+    <p>We serve delicious meals made with fresh ingredients and love.</p>
 </section>
 
 <footer>
-    <p>© 2026 Renah's Restaurant | All Rights Reserved</p>
+    <p>© 2026 Renah's Restaurant</p>
 </footer>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlides() {
+slides[index].classList.remove("active");
+index = (index + 1) % slides.length;
+slides[index].classList.add("active");
+}
+
+setInterval(showSlides, 3000);
+</script>
 
 </body>
 </html>
